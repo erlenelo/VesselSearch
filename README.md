@@ -45,9 +45,10 @@ localhost:8080/vessel/getAllWithCertificates
 ```
 
 ### 
-´´´sh	
+```sh
 localhost:8080/vessel/search?searchTerm={searchTerm}
-´´´
+```
+
 The searchTerm is a string that can be used to search for vessels. The search is done on the vesselName and imoNumber fields. The search is case insensitive, and the searchTerm can be a substring of the vesselName. ImoNumber must be an exact match.
 
 All endpoints can be tested with Postman. Only the GET endpoint can be tested in the browser, the POST endpoints must be done through Postman.
