@@ -12,7 +12,6 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import java.util.List;
 
-
 @Entity
 @Table(name="vessel")
 public class Vessel {
@@ -51,10 +50,20 @@ public class Vessel {
     public int getImoNumber() {
         return imoNumber;
     }
-
+    /**
+     * Sets the list of certificates associated with the vessel.
+     *
+     * @param certificates the list of certificates to be set
+     */
     public void setCertificates(List<Certificate> certificates) {
         this.certificates = certificates;
     }
+    
+    /**
+     * Retrieves the list of certificates associated with the vessel.
+     *
+     * @return the list of certificates associated with the vessel
+     */
     @JsonManagedReference
     public List<Certificate> getCertificates() {
         return certificates;

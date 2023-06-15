@@ -16,10 +16,11 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-
+/**
+ * The Certificate class represents a certificate associated with a vessel.
+ */
 @Entity
 @Table(name="certificate")
- //Ignore extra vessel object in query
 public class Certificate {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -73,11 +74,19 @@ public class Certificate {
     public void setEndDate(Date endDate){
         this.endDate = endDate;
     }
-
+    /**
+     * Retrieves the vessel associated with the certificate.
+     *
+     * @return the vessel associated with the certificate
+     */
     public Vessel getVessel() {
         return vessel;
     }
-
+    /**
+     * Sets the vessel associated with the certificate.
+     *
+     * @param vessel the vessel to be set as the associated vessel
+     */
     public void setVessel(Vessel vessel) {
         this.vessel = vessel;
     }
