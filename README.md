@@ -44,7 +44,7 @@ JSON-body example:
 localhost:8080/vessel/getAllWithCertificates
 ```
 
-### 
+### Get vessel by ImoNumber or vesselName/substring of vesselName (GET) ###
 ```sh
 localhost:8080/vessel/search?searchTerm={searchTerm}
 ```
