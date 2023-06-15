@@ -1,7 +1,15 @@
 # VesselSearch Backend #
-This is the backend for the VesselSearch application. Together with the frontend, it allows the user to search for vessels in the database and view their details. The backend is written in Java Spring Boot, and the frontend is written in React, implemented with Typescript. The database is a MySQL database.
+This is the backend for the VesselSearch application. Together with the frontend, it allows the user to search for vessels in the database and view their details. The backend is written in Java Spring Boot, and the frontend is written in React, implemented with Typescript. The database is a MySQL database, and currently the frontend has no post functionality, so the database must be created and populated with data through Postman or direct inserts.
 
 See the README.md in the frontend folder for more information about the frontend. [Link to the Frontend Repository for this project.](https://github.com/erlenelo/VesselSearch-Frontend)
+
+## VesselSearch ##
+As a whole, this application is a search engine for vessels. The user can search for vessels by name, substring of name, or imoNumber, and the application will return a list of vessels that match the search term. Any certificates issued for the vessel is also displayed in the card. 
+
+The application itself was developed as a part of a coding case issued by Skuld Assurance. The following requirements were given:
+* The application should be able to search for vessels by name, substring of name, or imoNumber.
+* The application should be able to display the vessel details, including the vessel name, imoNumber, and all certificates issued for the vessel.
+* The application must use Java Spring Boot for the backend. Other technology choices are up to the developer.
 
 ER diagram of the database:
 ![ER diagram](ER-Diagram-VesselBase.png)
@@ -65,8 +73,6 @@ mvn spring-boot:run
 The backend will then run on port 8080.
 Proceed to the frontend folder, Do the following:
 ```sh
-cd vsui
 npm install
 npm start
 ```
-If some dependencies are missing, you can install them specifically with npm install. The frontend will then run on port 3000 (which is a port that is whitelisted by the backend through the CorsConfig class).
