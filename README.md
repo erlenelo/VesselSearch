@@ -1,9 +1,13 @@
 # VesselSearch Backend #
 This is the backend for the VesselSearch application. Together with the frontend, it allows the user to search for vessels in the database and view their details. The backend is written in Java Spring Boot, and the frontend is written in React, implemented with Typescript. The database is a MySQL database.
 
-See the README.md in the frontend folder for more information about the frontend.
+See the README.md in the frontend folder for more information about the frontend. [Link to the Frontend Repository for this project.](https://github.com/erlenelo/VesselSearch-Frontend)
 
-##How to run##
+ER diagram of the database:
+![ER diagram](ER-Diagram-VesselBase.png)
+Note that vesselId is foreign key in the certificate table, allowing for a one-to-many relationship between vessels and certificates, where a vessel can have many certificates, but a certificate can only be issued for one vessel. This means that retreiving a vessel from the database will also return all certificates issued for that vessel.
+
+## How to run the application ##
 - Ensure that you have Java 11 installed, and that you have a MySQL database running on port 3306. The database must be created initially, and you can use Postman to add vessels and corresponding certificates to the database. 
 
 Below are available endpoints:
