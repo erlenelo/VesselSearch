@@ -11,9 +11,10 @@ The application itself was developed as a part of a coding case issued by Skuld 
 * The application should be able to display the vessel details, including the vessel name, imoNumber, and all certificates issued for the vessel.
 * The application must use Java Spring Boot for the backend. Other technology choices are up to the developer.
 
-ER diagram of the database:
+### ER Diagram ###
 
 ![ER diagram](./ER-Diagram-Vesselbase.png)
+<br/><br/>
 
 Note that vesselId is foreign key in the certificate table, allowing for a one-to-many relationship between vessels and certificates, where a vessel can have many certificates, but a certificate can only be issued for one vessel. This means that retreiving a vessel from the database will also return all certificates issued for that vessel.
 
