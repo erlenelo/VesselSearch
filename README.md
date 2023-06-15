@@ -16,7 +16,7 @@ ER diagram of the database:
 Note that vesselId is foreign key in the certificate table, allowing for a one-to-many relationship between vessels and certificates, where a vessel can have many certificates, but a certificate can only be issued for one vessel. This means that retreiving a vessel from the database will also return all certificates issued for that vessel.
 
 ## How to run the application ##
-- Ensure that you have Java 11 installed, and that you have a MySQL database running on port 3306. The database must be created initially, and you can use Postman to add vessels and corresponding certificates to the database. 
+- Ensure that you have Java 11 installed, and that you have a MySQL database running on port 3306. The database must be created initially, and you can use Postman to add vessels and corresponding certificates to the database, or insert directly in the database. 
 
 Below are available endpoints:
 ### Add certificate to a vessel (POST)###
